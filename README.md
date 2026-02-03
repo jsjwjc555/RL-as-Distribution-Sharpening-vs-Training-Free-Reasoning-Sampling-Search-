@@ -48,3 +48,34 @@
 - **MC-NEST: Enhancing Mathematical Reasoning in LLMs with Monte Carlo Self-Refine Tree** (2024)  
   - 把 self-refine/self-eval 融入 MCTS，适合数学推理。
   - https://arxiv.org/abs/2411.15645
+
+> 关键词： iclr 2026
+
+- **The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models** (ICLR 2026 submission)
+   - 直接聚焦“RLVR 可能收缩 reasoning boundary”的动态机制分析（贴合：RL 改变了 base 的什么）。
+   - https://openreview.net/forum?id=sau3jEEyvR
+ 
+- **DeepSearch: Overcome the Bottleneck of Reinforcement Learning with Verifiable Rewards via Monte Carlo Tree Search** (ICLR 2026 submission)
+   - 用 MCTS/搜索提升可验证奖励场景下的探索与解空间覆盖（可理解为“RL 可能偏锐化，search 负责扩覆盖”）。
+   - https://openreview.net/forum?id=Kx0G6v2c2S
+
+- **Efficient Test-time Scaling via Iterative Deepening (ID-sampling)** (ICLR 2026 submission)
+   - 通过 iterative deepening 提升 test-time scaling 的采样效率，更快“抽到正确轨迹”。
+   - https://openreview.net/forum?id=72b05slV0s
+
+- **Recursive Self-Aggregation Unlocks Deep Thinking in LLMs** (ICLR 2026 submission)
+   - 融合并行多样本 + 顺序自我修订/聚合，作为 training-free 的深度推理路线。
+   - https://openreview.net/forum?id=J7upvGcP9h
+
+## 3.相反观点：Prolonged RL 可能真的“扩边界”，关键在训练阶段/动态
+
+- **ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models**
+   - 强调 prolonged RL + KL 控制 + reference reset + 多任务 等机制，声称能得到“base 大量采样也到不了”的新策略/新可解集。
+   - https://arxiv.org/pdf/2505.24864
+
+- **The Debate on RLVR Reasoning Capability Boundary: Shrinkage, Expansion, or Both? A Two-Stage Dynamic View**
+   - 给了一个很有用的“调和框架”：把 RLVR 过程分成 exploitation stage（早期更像锐化、甚至导致收缩）和 exploration stage（训练足够久才可能真正扩展）。
+   - https://arxiv.org/pdf/2510.04028
+ 
+- **FROM f (x) AND g(x) TO f (g(x)): LLMS LEARN NEWSKILLS IN RL BY COMPOSING OLD ONES**
+   - https://openreview.net/pdf?id=jt7oCtYqHE
